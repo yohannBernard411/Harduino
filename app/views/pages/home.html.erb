@@ -1,2 +1,531 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Technical documentation</title>
+</head>
+<body>
+    <nav id="navbar">
+        <ul class="menu" id="menu">
+            <header id="subtitle">Arduino</header>
+            <li class="page">
+              <a class="nav-link">
+                <span><i class="fa fa-id-card"></i></span>
+                <span>Presentation</span>
+              </a>
+            </li>
+            <li class="page">
+                <a class="nav-link">
+                    <span><i class="fa fa-wrench"></i></span>
+                    <span>Installer vos outils de travail</span>
+                </a>
+            </li>
+            <li class="page">
+                <a class="nav-link">
+                    <span><i class="fas fa-infinity"></i></span>
+                    <span>Qu'est ce que l'arduino</span>
+                </a>
+            </li>
+            <li class="page">
+                <a class="nav-link">
+                    <span><i class="fa fa-microchip"></i></span>
+                    <span>Materiel</span>
+                </a>
+            </li>
+            <li class="page">
+                <a class="nav-link">
+                    <span><i class="fas fa-desktop"></i></span>
+                    <span>Logiciel</span>
+                </a>
+            </li>
+            <li class="page">
+                <a class="nav-link">
+                    <span><i class="fas fa-code"></i></span>
+                    <span>La structure d'un programme arduino</span>
+                </a>
+            </li>
+            <li class="page">
+                <a class="nav-link">
+                    <span><i class="fas fa-bars"></i></span>
+                    <span>Le menu du logiciel</span>
+                </a>
+            </li>
+            <li class="page">
+                <a class="nav-link">
+                    <span><i class="fas fa-lightbulb"></i></span>
+                    <span>La LED 13</span>
+                </a>
+            </li>
+            <li class="page">
+                <a class="nav-link">
+                    <span><i class="fa fa-object-group"></i></span>
+                    <span>Votre premier programme</span>
+                </a>
+            </li>
+            <li class="page">
+                <a class="nav-link">
+                    <span><i class="fa fa-recycle"></i></span>
+                    <span>Fréquences et periode</span>
+                </a>
+            </li>
+            <li class="page">
+                <a class="nav-link">
+                    <span><i class="fas fa-download"></i></span>
+                    <span>Sauvegarde et transfert programme</span>
+                </a>
+            </li>
+            <li class="page">
+                <a class="nav-link">
+                    <span><i class="fas fa-exclamation-circle"></i></span>
+                    <span>En résumé</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+<main class="main-doc" id="main-doc">
+    <h1>Arduino</h1>
+    <section class="main-section" id="Presentation">
+        <header>Presentation</header>
+        <p>Les objets connectés, ça vous branche ? Vous rêvez de construire un robot autonome, de contrôler votre maison depuis votre mobile, 
+        ou encore de réaliser votre propre guirlande de Noël ? Ce cours est fait pour vous ! Il va vous permettre d'apprendre à programmer 
+        une carte Arduino pour connecter des composants et réaliser toutes sortes de projets allant de micro-robotique à art numérique, en 
+        passant par domotique, électricité ou encore mécanique.
+        Voici à quoi ressemble la carte Arduino :</p>
+        <img src="https://zupimages.net/up/19/26/ivd5.jpg" alt="carte arduino">
+        <p>Et voici quelques exemples de ce que vous pouvez réaliser avec une telle carte :
+        Un robot mobile capable d'éviter les obstacles ou de suivre une ligne au sol ;
+        Une interface entre votre téléphone mobile et les éclairages de votre maison ;
+        Des afficheurs d'informations à base de textes défilants sur des panneaux à LEDs ;
+        Une station météorologique consultable sur le Web ;
+        Un pilote de caméra de surveillance.
+        De plus en plus utilisé dans le monde de l'éducation, l'Arduino est aussi apprécié dans le cadre des technologies embarquées,
+        du modélisme et peut rapidement devenir un hobby. La force de cette carte Arduino à microcontrôleur est, au-delà de son prix,
+        la facilité avec laquelle on peut réaliser des petits projets viables, et surtout la communauté libre qui s'est développée 
+        autour d'elle.
+        L'objectif de ce cours est donc de vous initier à la programmation et la réalisation de montages avec une carte Arduino.</p>
+    </section>
+
+    <section class="main-section" id="Installez_vos_outils_de_travail">
+        <header>Installez vos outils de travail</header>
+        <p>Comme pour toute chose, il faut commencer par le commencement. Le monde de l’Arduino est immense. On peut s’y perdre (toujours
+        avec plaisir), on peut s’y disperser et passer à côté de l’essentiel. C’est un voyage à préparer. Il faut savoir où l’on va, 
+        comment on y va, ce qu’on doit prendre et connaître, les risques, les attentes, les plaisirs, les déceptions, la durée et tant 
+        d’autres détails qui feront de cette expérience une aventure unique et addictive. Quel lyrisme ! Bref tout ça pour dire qu’en 
+        lisant cette partie, vous saurez quelle est la voie que je vous propose de suivre jeunes padawans : découvrir ce qu'est l'Arduino, 
+        à qui il peut convenir, comment se le procurer, quels outils installer et quel matériel acquérir.</p>
+    </section>
+
+    <section class="main-section" id="Qu'est_ce_que_l'arduino?">
+        <header>Qu'est ce que l'arduino?</header>
+        <p>Bonne question, allons voir tout d’abord du côté de Wikipédia. J'ai allégé leur définition et j'ai mis en gras le vocabulaire à 
+        connaître en l'expliquant ensuite. Arduino est un circuit imprimé en matériel libre  sur lequel se trouve un microcontrôleur qui 
+        peut être programmé pour analyser et produire des signaux électriques. Et bien, ça en fait du vocabulaire à connaître ! Reprenons 
+        tous ces termes pas à pas pour éclaircir tout ça . Circuit imprimé : C’est une sorte de plaque sur laquelle sont soudés plusieurs 
+        composants électroniques reliés entre eux par un circuit électrique plus ou moins compliqué. L’Arduino est donc un circuit imprimé. 
+        La photo donne une idée de la taille par  rapport à la connexion USB carrée (à gauche sur la photographie, la même que sur votre 
+        imprimante par exemple).
+        Matériel libre : En fait, les plans de la carte elle-même sont accessibles par tout le monde, gratuitement. La notion de libre 
+        est importante pour des questions de droits de propriété. Microcontrôleur : C’est le cœur de la carte Arduino. C’est une sorte 
+        d'ordinateur  minuscule (mémoire morte, mémoire vive, processeur et entrées/sorties) et c’est lui que nous allons programmer. 
+        Sur la photo précédente, c'est le grand truc rectangulaire noir avec plein de pattes. Une fois lancé et alimenté en énergie, il 
+        est autonome. La force de l’Arduino est de nous proposer le microcontrôleur, les entrées/sorties, la connectique et l’alimentation 
+        sur une seule carte. La carte Arduino est construite autour d'un microcontrôleur Atmel AVR (pas toujours le même en fonction de la
+        date de sortie de la carte) avec une capacité de mémoire de 32000 octets pour l'Arduino UNO.  Soit 32 Ko,  ce qui n'est vraiment 
+        pas beaucoup et qui permet pourtant de réaliser un max de projets !</p>
+        <img src="https://zupimages.net/up/19/26/511n.png" alt="microcontroleur">
+        <p>Signaux électriques : L'Arduino fonctionne avec de l'électricité. Un signal électrique est un passage d'électricité dans une 
+        partie du circuit. L'Arduino est donc capable de produire ou de capter ces signaux à notre demande grâce à la programmation.
+        L’Arduino est donc une carte qui se connecte sur l’ordinateur pour être programmée, et qui peut ensuite fonctionner seule si 
+        elle est alimentée en énergie. Elle permet de recevoir des informations et d’en transmettre depuis ou vers des matériels 
+        électroniques : diodes, potentiomètres, récepteurs, servo-moteurs, moteurs, détecteurs... Nous en ferons une description plus 
+        précise au fur et à mesure de ce cours. En attendant, voici un schéma qui résume les principales interactions en jeu lorsque l’on 
+        programme une carte Arduino pour contrôler du matériel. Les flèches vertes indiquent la circulation des signaux électriques, la 
+        flèche orange pointillée représente l'envoi du programme vers l'Arduino et les flèches bleues les interactions avec le monde réel .</p>
+    </section>
+
+    <section class="main-section" id="Materiel">
+        <header>Materiel</header>
+        <p>On n’a rien sans rien. L’Arduino n’échappe pas à la règle. Il va donc falloir vous équiper de matériel pour bien débuter, et
+        c’est ce que nous allons voir dans cette section !
+        La programmation sur Arduino, du fait de son interfaçage avec des matériels électroniques, nécessite d’acheter du hard...ware ! 
+        (Et non Lukas, ce n'est pas ce que vous imaginiez...) Le hardware est la partie matérielle de l’informatique, souvent faite 
+        d’électronique, elle s’oppose au software qui en est la partie logicielle. Le coût du hardware nécessaire pour programmer sur Arduino 
+        n’est pas excessif, mais il n’est pas anodin non plus. D’autant qu’en fonction des projets que vous souhaitez réaliser, le matériel 
+        en jeu peut vous demander d’investir plus que prévu. Ce cours, au moins pour la première partie, ne va pas demander de casser votre 
+        grosse tirelire suisse, mais la petite réservée aux plaisirs exceptionnels (Lukas ça suffit !). Comptez environ 50€ pour bien débuter.</p>
+            <ol>
+                <li>
+                    <h3>La carte Arduino</h3>
+                    <p> Afin de pouvoir commencer à programmer, il vous faut acquérir la carte Arduino. Plusieurs sites de vente de matériel électronique 
+                    vous la proposent. Ce cours est basé sur l’Arduino UNO R3 que je vous ai montrée dans la section précédente. Vous vous rappelez ? 
+                    Celle-ci :</p>
+                    <img src="https://zupimages.net/up/19/26/ivd5.jpg" alt="carte arduino">
+                    <p>Je vous conseille de commencer par cette carte. Si la passion vous gagne, vous aurez rapidement envie (et besoin) d’en acquérir 
+                    une autre, à ce moment votre choix sera peut-être différent. Le coût est d’environ 25€.</p>
+                </li>
+                <li>
+                    <h3>La breadboard</h3>
+                    <p>Ensuite il faut prévoir une plaque d’essai ou breadboard qui est  indispensable pour tester et interfacer ses projets. C’est une 
+                    plaque en plastique avec des rangées de trous (par cinq) dans lesquels nous planterons nos composants. J’en explique le fonctionnement 
+                    plus loin.</p>
+                    <img src="https://zupimages.net/up/19/26/f7ru.jpg" alt="breadboard">
+                    <p>Il existe des breadbords de plusieurs tailles. Ne choisissez pas trop petit, en effet vous aurez rapidement besoin de place. Pensez 
+                    aussi à prendre une breadboard qui comporte deux grandes lignes de trous de chaque côté (voir la photo ci-dessus), ça facilite grandement 
+                    les connexions. Les coûts varient entre 5€ et 15€ la plaque. Une seule suffit pour commencer, elle permet de réaliser tous les montages 
+                    de ce cours. En revanche, là encore, vous aurez très vite envie d’avoir des planches d’essai de diverses tailles en fonction de vos projets. 
+                    Et si vraiment vous allez plus loin, vous ferez vos propres circuits imprimés, mais nous y reviendrons bien plus tard dans ce cours.</p>
+                </li>
+                <li>
+                    <h3>Les fils de connection</h3>
+                    <p>Il vous faudra aussi des fils pour la connexion des composants entre eux et vers l’Arduino : des jumpers. Ces fils existent sous plusieurs 
+                    formats : semi-rigides et dénudés à chaque extrémité, ou bien souples avec une connectique au bout (femelle/femelle, mâle/mâle, mâle/femelle). 
+                    Vous pouvez bidouiller avec des trombones ou autres trucs métalliques fins, mais réellement, le jumper devient vite indispensable. Là encore 
+                    on en trouve sur le net et pour 10€ vous serez largement garnis. Voici à quoi ressemble un jumper (ici au format souple) :</p>
+                    <img src="https://zupimages.net/up/19/26/kjbs.jpg" alt="fils souples">
+                </li>
+                <li>
+                    <h3>Les composants</h3>
+                    <p>Enfin, il vous faudra les composants que vous souhaitez contrôler avec votre carte Arduino. Voici la liste que je qualifierais de prioritaire 
+                    pour suivre les parties 1 et 2 du cours :</p>
+                        <ul class="compo"><br><br><br><br>
+                            <li>LED (pour produire de la lumière) : Au moins 5, vous pouvez panacher les couleurs !</li>
+                            <li>Résistances (pour contrôler le courant) : 5 de 220 Ω, 2 de 10 kΩ, 2 de 1 KΩ.</li>
+                            <li>Contacteurs ou bouton poussoir (pour interagir avec le montage) : 2 boutons poussoirs qui peuvent se connecter sur une breadboard.</li>
+                            <li>Potentiomètres (pour créer des variations) : 1 de 10 KΩ, compatible breadboard.</li>
+                        </ul>
+                            <p>Vous n’en aurez pas pour plus de 10€. Ces composants se trouvent dans n'importe quelle boutique d'électronique, ou en ligne 
+                            (MCHobby, Adafruit, RSonline, Conrad...).
+                            Voici maintenant une liste qui permet de suivre la suite du cours (dernière partie) :</p>
+                        <ul class="compo">
+                            <li>Servo-moteurs (pour créer des mouvements) : 1 suffira, pilotable sur 5V.</li>
+                            <li>Moteur CC (courant continu) : 2, qui fonctionnent avec une tension entre 3V et 6V.</li>
+                            <li>Un transistor bipolaire NPN (PN2222) et un MOSFET (IRF540N), Ils servent à piloter les moteurs entre autres.</li>
+                            <li>Une diode Schottky (1N4001), elle autorise le passage du courant dans un seul sens.</li>
+                            <li>Une puce L293D, pour piloter les moteur CC.</li>
+                            <li>etc.</li>
+                        </ul>
+                </li>
+            </ol>
+            <p>Les tarifs peuvent varier (en particulier sur les moteurs et les servo-moteurs). Pour débuter, prenez le plus simple et le moins onéreux. Là 
+            encore, vous les trouverez en boutique ou sur les sites cités plus haut. Vous pouvez aussi faire de la récupération. Donc si nous résumons, ça 
+            nous fait un total de 55€ à la louche, c’est l’investissement minimum. Je vous conseille de regarder certaines offres qui proposent un kit du 
+            débutant ou starter kit aux alentours de 50€ avec le matériel cité au dessus et quelques composants supplémentaires.</p>
+    </section>
+    
+    <section class="main-section" id="logiciel">
+        <header>logiciel</header>
+        <p>Alors la bonne nouvelle c’est que pour le logiciel, il n’y a rien à payer ! (je considère que vous avez déjà un ordinateur bien sûr). Il suffit 
+        de télécharger le logiciel sur le site officiel de l’Arduino. Rendez-vous dans l’onglet “Download”, puis en fonction de votre OS (Mac, Windows ou 
+        Linux) sélectionnez le bon logiciel et laissez l’installation se faire. Sélectionnez tout de même un emplacement simple et logique pour 
+        l’installation. En effet, nous aurons à y revenir par la suite pour y déposer des bibliothèques de codes. 
+        Si tout s’est bien déroulé, vous aurez accès à un programme avec un logo vert et un signe infini contenant un plus et un moins. C’est le logo Arduino 
+        que l’on retrouve sur la carte. Démarrez le programme et vous obtenez une fenêtre au bords turquoise dans laquelle vous pourrez saisir du texte.</p>
+        <img src="https://zupimages.net/up/19/26/qsm0.jpg" alt="interface graphique">
+        <p>La dernière version du logiciel vous propose une fenêtre déjà remplie du code de base de l'Arduino, nous en parlerons dans le chapitre suivant.
+        Vous êtes maintenant prêt(e)s pour la suite.
+        Encore une dernière petite section avant de cheminer dans le  monde sibyllin de la programmation de la carte Arduino (Lukas, vous irez chercher 
+        sibyllin dans le dictionnaire ça vous occupera...)</p>
+    </section>
+
+    <section class="main-section" id="La_structure">
+        <header>La structure de base d'un programme Arduino</header>
+        <p>Bon, il faut savoir que le langage utilisé par le logiciel Arduino pour programmer le microcontrôleur est basé sur les langages C/C++.
+        Vous allez de ce pas créer les premières lignes de votre premier programme Arduino. À partir de maintenant, il va falloir admettre que si votre 
+        programme plante, ce n'est pas la faute de l'ordinateur ou de l'Arduino, mais la vôtre. En effet, un ordinateur, même de la taille de l'Arduino, va vous 
+        obéir au doigt et à l'oeil, mais jamais ne réfléchira par lui-même. Donc si la série d'instructions que vous lui donnez l'amène à sa destruction, et bien 
+        il se détruira. Ou au mieux, il se bloquera. Nous allons donc devoir apprendre à éviter ces situations énervantes que provoquent les bugs. Mais voyons 
+        plutôt notre premier programme. Je vais vous demander d'ouvrir le logiciel Arduino, pour le moment nous n'allons pas connecter la carte à votre ordinateur. 
+        Une fois la fenêtre d'accueil ouverte, vous allez taper dans la zone blanche ce qui suit (soyez rigoureux et faites attention aux ponctuations et majuscules) :</p>
+        <code>void setup()<br>{<br>}<br>void loop()<br>{<br>}<br></code>
+        <p>Pour ceux qui ont la dernière version d’Arduino (version 1.6.5 au mois d'octobre 2015), ces lignes apparaîtront par défaut dans la fenêtre,  je vous 
+        demanderai de tout effacer et d'écrire à partir de la page blanche, c'est pour mieux comprendre la suite. Alors vous avez sûrement remarqué que les mots se 
+        colorent lorsqu'on les a saisis. C'est un petit plus très pratique qui s'appelle la coloration syntaxique. Elle très employée en informatique. Elle nous 
+        permet de faire la différence entre les mots clés du langage utilisé, et les autres.
+        Je ne vais pas ici donner la liste de tous les mots utilisés par le logiciel Arduino, nous les apprendrons lorsque nous en aurons besoin. Mais dans le 
+        programme au-dessus, vous venez d'en rencontrer trois : void, setup(), loop(). Retenez-les ! Regardons à nouveau le programme, nous observons des parenthèses 
+        et des accolades. Pour les utilisateurs de Windows, ça reste assez évident à obtenir. Pour ceux qui ont un Mac, l'accolade s'obtient en utilisant la combinaison : 
+        alt + (   ou   alt+)</p>
+    </section>
+
+    <section class="main-section" id="Le_menu_du_logiciel">
+        <header>Le menu du logiciel</header>
+        <p>Intéressons-nous maintenant au menu proposé par le logiciel :</p><br><br><br>
+        <img src="https://zupimages.net/up/19/26/uqm3.png" alt="boutons du menu">
+        <p>Ces cinq boutons sont quasiment les seuls que nous aurons à utiliser pour lancer le programme (nous verrons d'autres fonctionnalités par la suite). Nous allons 
+        donc les étudier un par un dans ce chapitre. Vous remarquerez qu'en les survolant, un texte d'aide s'affiche sur la droite des icônes.</p>
+        <h3>Le V de vérifier</h3>
+        <p>Ce bouton permet de vérifier votre programme. C'est-à-dire que le logiciel Arduino va chercher si ce que vous avez écrit est conforme à ce qui est attendu.
+        Allez-y, cliquez dessus. Si vous avez bien écrit les lignes que je vous ai demandées dans la section précédente, vous obtenez en bas, dans la fenêtre noire, un 
+        texte du genre : </p>
+        <figure>
+            <img src="https://zupimages.net/up/19/26/wh7w.png" alt="message">
+            <figcaption>Ça signifie que le programme est correct.</figcaption>
+        </figure>
+        <p>Qu'est-ce que la compilation ?
+        De le savoir ne vous changera pas la vie, mais je comprends les curieux. En fait le programme que vous écrivez n'est pas celui que recevra l'Arduino. C'est un 
+        programme adapté pour que les humains le lisent et le comprennent sans trop de difficulté. La machine, elle, ne comprend que le langage machine, une succession 
+        de 1 et de 0, qu'elle va interpréter et exécuter. La compilation est la transformation du langage de programmation utilisé par l'homme, en langage machine utilisé
+        par la machine. C'est d'ailleurs le rôle de l'interface pour l'Arduino. 
+        Vous pouvez maintenant essayer de modifier votre programme en enlevant la première accolade, vous cliquez la vérification et vous obtenez en bas un message 
+        du genre :</p>
+            <figure>
+                <img src="https://zupimages.net/up/19/26/trjh.png" alt="erreur">
+                <figcaption>Exemple de message d'erreur</figcaption>
+            </figure>
+        <p>On sent tout de suite à la couleur qu'il se passe quelque chose de pas net, et on a raison ! Le logiciel de l'Arduino propose aussi un petit débuggeur. Il ne 
+        va pas vous réparer tout seul l'erreur, mais il vous indique où il pense qu'elle se trouve. C'est ce qui se passe dans notre cas. Pour comprendre un peu ce qui 
+        ce passe, il faut lire le message d'erreur :</p>
+            <ul class="erreur">
+                <li>"sketch_feb20a.ino" c'est le nom de votre programme.</li>
+                <li>"4:1"  signifie que ligne 4 caractère 1, le programme bloque pour la compilation.</li>
+                <li>"expected" un truc,  indique le type d'erreur. Mais ce n'est pas toujours la bonne raison.</li>
+            </ul>
+        <p>Les erreurs fréquentes sont que vous avez oublié de taper quelque chose ou que vous n'avez pas respecté le format attendu. Dans les premiers temps, vous 
+        oublierez surtout des points-virgules et des fermetures d'accolades ou de parenthèses. Plus tard, les problèmes se corseront car le logiciel ne verra pas 
+        forcément d'erreur et pourtant votre programme ne fera pas ce que vous souhaitez. Mais nous n'en sommes pas là. (Je vois à votre tête décomposée Lukas que la 
+        perspective de réfléchir sans aide vous paraît inaccessible, rassurez-vous, tout le monde finit par y arriver !) Pour réparer l'erreur dans notre cas, remettez 
+        l'accolade, puis cliquez à nouveau sur le bouton Vérifier. Tout devrait rentrer dans l'ordre.</p>
+        <h3>La fleche de téléverser</h3>
+        <p>MESDAMES ET MESSIEURS, JE VOUS ANNONCE OFFICIELLEMENT QUE VOUS POUVEZ CONNECTER LA DERNIÈRE MERVEILLE TECHNOLOGIQUE, J'AI NOMMÉ L'ARDUINO, À VOTRE ORDINATEUR 
+        PERSONNEL GRÂCE AU CÂBLE USB ! Et là, c'est pas gagné pour tout le monde. En effet en fonction de votre système, l'Arduino va ou non être reconnu. Sur Windows, 
+        vous devrez peut-être attendre qu'il installe un pilote de périphérique. Il n'y a pas trop le choix, il faut le faire.
+        Une fois connectés, vous pouvez cliquer sur l'icône avec la flèche pour téléverser le programme. Le logiciel va donc transférer votre programme compilé 
+        (transformé en langage machine) dans la mémoire du microcontrôleur de l'Arduino. Une fois cette opération effectuée, l'Arduino gardera ce programme en mémoire 
+        et l'exécutera tant qu'il sera alimenté en électricité. Il sera donc autonome et ne dépendra plus de l'ordinateur !
+        Et bien il ne fait rien ! Strictement rien ! Pas facile, essayez vous-mêmes, on fait toujours un truc. Là ça ne fait rien ! Sauf que c'est l'ossature même 
+        de TOUS les programmes que nous ferons par la suite. C'est le code de base. Quel que soit le programme, on commence par taper ça, et ensuite on remplit ce qu'il 
+        faut où il faut. Maintenant que vous connaissez la forme de base d'un programme, attaquons-nous à du lourd ! Construisons un programme qui fait quelque chose.</p>
+    </section>
+            
+    <section class="main-section" id="La_LED_13">
+        <header>La LED 13</header>
+        <p>Puisque nous avons la carte Arduino sous les yeux, observons-la un peu.</p>
+        <figure>
+            <img src="https://zupimages.net/up/19/26/88m4.png" alt="schema">
+            <figcaption>Schéma d'une carte Arduino</figcaption>
+        </figure>
+        <p>Ceci est une image simplifiée obtenue avec le logiciel Fritzing. Elle reprend les parties importantes de la carte. Nous allons nous intéresser au haut de 
+        cette image (orientez votre Arduino pour que ça corresponde). Vous voyez des trous numérotés de 0 à 13, puis GND et AREF. Un peu en dessous, vous voyez 3 petits 
+        rectangles notés L, TX et RX, et un autre à droite noté ON. Ces rectangles sont des LED, c’est-à-dire des “Light-Emitting Diodes”. Nous verrons plus tard ce que 
+        c’est, pour le moment il suffit de comprendre que ça peut s’allumer. Ici nos 4 LEDs peuvent briller dans plusieurs cas :</p>
+        <ul class="lumiere">
+            <li>La LED ON est verte quand l'Arduino est sous tension.</li>
+            <li>Les LEDs TX et RX clignotent quand l'Arduino reçoit ou envoie des informations.</li>
+            <li>La LED L clignote si on appuie sur le bouton reset, sinon elle ne fait rien tant qu'on ne lui a pas dit.</li>
+        </ul>
+        <p>C'est la LED L que nous allons allumer grâce à notre petit programme. Une diode s'allume quand elle est parcourue par le bon courant, dans le bon sens. 
+        La force de l'Arduino (entre autre)  est d'envoyer du courant, ou non, par les connexions numérotées de 0 à 13. Et la diode L s'allume quand on dit à l'Arduino
+        d'envoyer du courant dans la connexion 13. C'est pour ça que je l'appelle la LED 13. Vous verrez qu'elle est bien pratique et qu'elle peut servir dans certains 
+        cas pour nous aider à débugger. Savoir l'allumer et l'éteindre à volonté est une opération de base sur l'Arduino.</br>
+        Les étapes du programme sont assez simples :</p>
+        <ol>
+            <li>On dit à l'Arduino que nous voulons que la connexion 13 puisse envoyer du courant (et pas en recevoir).</li>
+            <li>On dit à l'Arduino d'envoyer du courant dans la connexion 13.</li>
+        </ol>
+        <p>Programmer l'Arduino c'est transformer ces instructions en langage codé. Et ça vous ne pouvez pas le deviner seuls.
+        Voici donc le programme à taper et à envoyer à l'Arduino (attention à nouveau à la ponctuation et aux majuscules !) :</p>
+        <code>void setup()<br>{<br>pinMode(13,OUTPUT);  //Signale à l’Arduino que la connexion 13 doit pouvoir envoyer du courant<br>
+            digitalWrite(13,HIGH);  //Demande à l’Arduino d’envoyer du courant dans la connexion 13<br>} <br>void loop()<br>{  <br>}<br></code>
+        <p>J'attire votre attention sur des nouveaux mots-clés : <b>pinMode()</b>, <b>digitalWrite()</b>, <b>OUTPUT</b>, <b>HIGH</b>. Ils ne sont pas colorés pareil, 
+        nous verrons plus tard pourquoi. Vous observez que la structure de tout à l'heure n'a pas changé, on a juste ajouté entre les accolades deux instructions.
+        Le nombre 13 n'est pas anodin, c'est bien la connexion 13 qui est en jeu. Ben c'est bien beau tout ça, mais comment on l'éteint cette diode maintenant. On ne 
+        peut pas l'éteindre. Même si vous appuyez sur le reset de l'Arduino, la diode se rallume. Il fait ce qu'on lui a demandé. Pour l'éteindre, il faut donc lui 
+        envoyer un nouveau programme qui va lui dire d'éteindre la diode. Les mots clés en bleu dans le logiciel, sont spéciaux. Ils s'écrivent en majuscules. Ce sont 
+        des valeurs que l'Arduino connaît et utilise. Dans notre cas, le mot clé HIGH (Lukas, on prononce plutôt "hhaï" que "igue") signifie "valeur haute". Il existe 
+        son contraire : LOW qui signifie "valeur basse". On pourrait aussi dire que HIGH vaut 1 et LOW vaut 0, ou encore que HIGH veut dire que la connexion est à +5V 
+        et LOW, qu'elle est à est à 0V. Je vous laisse modifier le programme (et le téléverser) afin que la diode s'éteigne. Il est important d'essayer seul de chercher 
+        la solution, de débugger et de finalement trouver. Regarder la correction sans avoir réfléchi par soi-même avant est beaucoup moins formateur. Ça y est, vous 
+        avez trouvé la solution ? Alors vérifiez la correction ! Vous avez trouvé cela un peu long jusqu'à maintenant ? Faites une petite pause si besoin : un petit 
+        café, un petit tour dehors... ce qui vous plaît pour vous changer les idées 5 minutes ! (Non Lukas, cette proposition est hors-sujet). Lorsqu'on débute vraiment 
+        (je ne parle pas de ceux qui ont déjà touché du code) ces concepts peuvent paraître abstraits et déroutants. L'expérience vous aidera par la suite à mieux créer 
+        des liens entre tout ce que vous aurez ingurgité. Bon si vous êtes prêts, nous allons attaquer notre premier programme plus compliqué. On a allumé la diode, on 
+        l'a éteinte, et si on la faisait clignoter maintenant ?</p>
+    </section>
+
+    <section class="main-section" id="Votre_premier_programme">
+        <header>Votre premier programme</header>
+        <p>À chaque fois que vous décidez de réaliser un programme, il est important de savoir à l'avance, le plus précisément possible ce que vous voulez obtenir. Il 
+        est toujours tentant de se lancer directement dedans et de modifier au fur et à mesure,  mais plus votre programme sera complexe, plus le modifier pour intégrer 
+        nouvelles possibilités sera compliqué. Dans notre cas, ça devrait aller. Ce programme va nous permettre de mieux comprendre la structure de base du programme 
+        Arduino et la raison des deux séries d'accolades. Ouvrez le logiciel pour l'Arduino et cliquez sur l'icône de nouveau programme et nommez-le "BlinkBlink".
+        Nous voulons faire clignoter la LED 13 donc les étapes seraient :</p>
+        <ol>
+            <li>Nous indiquons à l'Arduino que la connexion 13 doit pouvoir envoyer du courant</li>
+            <li>Nous indiquons d'envoyer du courant dans la connexion 13 (la diode s'allume)</li>
+            <li>Nous indiquons d'arrêter d'envoyer du courant dans la connexion 13 (la diode s'éteint)</li>
+            <li>Nous voulons ensuite recommencer au point numéro 2 à l'infini.</li>
+        </ol>
+        <p>Les points 1, 2 et 3 vous pouvez maintenant les programmer sans problèmes. Là où ça se complique, c'est le point 4. Et là l'Arduino, et sa structure de base, 
+        nous facilitent la tâche. En effet les accolades sont des sortes de capsules. Tout ce qui est entre les accolades est considéré comme un bloc d'instructions. 
+        Nous avons dans le programme deux sortes d'accolades : celles qui suivent l'instruction <b>setup()</b> et celles qui suivent l'instruction <b>loop()</b>.
+        Jusqu'à maintenant, nos instructions ont été mises dans les accolades de "setup". Nous dirons qu'elles sont dans le setup. Ces instructions ne sont lues et 
+        activées qu'une seule fois. Les instructions mises dans les accolades de "loop" seront lues et activées à l'infini ! Ce qui donne en représentation graphique :</p>
+        <figure>
+            <img src="https://zupimages.net/up/19/26/hm7c.bmp" alt="Fonctionnement programme">
+            <figcaption>Fonctionnement de la structure de base du programme</figcaption>
+        </figure>
+        <p>Prenons l'exemple du pseudo-programme suivant: </p>
+        <code>void setup()<br>{<br>instruction 1;<br>instruction 2;<br>}<br>void loop()<br>{<br>instruction 3;<br>instruction 4;<br>}<br></code>
+        <p>Voici le cheminement du programme :</p>
+        <table>
+            <thead>
+                <tr>
+                    <th colspan="2">Fonctionnement du programme</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><b><u>Ligne</u></b></td>
+                    <td><b><u>Ce que fait le programme</u></b></td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Il se prépare à lire le bloc setup()</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Il repère le début du bloc setup()</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Il exécute l'instruction 1</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Il exécute l'instruction 2</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Il repère la fin du setup()</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>Pas d'influence sur le programme</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>Il se prépare à lire le bloc loop() à l'infini</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>Il repère le début du bloc de la loop()</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>Il exécute l'instruction 3</td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>Il exécute l'instruction 4</td>
+                </tr>
+                <tr>
+                    <td>11</td>
+                    <td>Il rencontre la fin du bloc loop() donc il recommence au début du bloc (en 8)</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>Il exécute l'instruction 3</td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>Il exécute l'instruction 4</td>
+                </tr>
+                <tr>
+                    <td>11</td>
+                    <td>Il revient en 8</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                        <td colspan="2">Etc....</td>
+                </tr>
+            </tfoot>
+        </table>
+        <p>Et cela jusqu'à l'infini ou presque, ou tant qu'il aura du courant. Ce tableau vous paraît sûrement bien long. C’est fait exprès ! 
+        Il permet de bien différencier une exécution unique (setup) d'une exécution en boucle (loop), de plus il rappelle que les accolades 
+        montrent des limites de blocs d'instructions de programme. C'est à retenir absolument pour la suite. Alors du coup ça change un peu 
+        ce qu'on doit écrire si l'on veut que ça clignote à l'infini. Je vous laisse chercher un peu...
+        Voici la solution que vous pourriez proposer dans l'état actuel de vos connaissances :</p>
+        <code>void setup()<br>{<br>pinMode(13,OUTPUT);<br>}<br>void loop()<br>{<br>digitalWrite(13,HIGH);<br>digitalWrite(13,LOW);<br>}<br></code>
+        <p>Si vous avez trouvé cette solution seul(e)s, c'est que vous avez compris. Téléversez et observez ! Et là... c'est le drame ! En effet, 
+        tout est ok, Arduino exécute la première instruction une fois dans le setup, puis la loop exécute le reste à l'infini : j'allume, j'éteins, 
+        j'allume, j'éteins. Et pourtant la diode reste allumée ! Voilà exactement la situation la plus délicate pour un programmeur : il n'y a pas de 
+        bug, tout paraît nickel et pourtant le résultat n'est pas là. Alors que faire ? Dans votre cas vous êtes juste victimes du léger sadisme de 
+        celui qui vous guide dans ce cours, c'est à dire MOUA. En effet je ne vous ai pas tout dit, mais il fallait en passer par là. Nous allons devoir 
+        aborder un peu de physique (non Lukas, je parle de sciences physiques) et plus particulièrement les notions de fréquences et de périodes. Ne vous 
+        alarmez pas, ça coule tout seul.</p>
+    </section>
+        
+    <section class="main-section" id="Frequences_et_periode">
+        <header>Fréquences et période</header>
+        <p>Quand on se penche un peu sur la documentation de l'Arduino, on peut lire : "Chaque module possède au moins un régulateur linéaire 5 V et un 
+        oscillateur à quartz 16 MHz (ou un résonateur céramique dans certains modèles)." Ça veut dire que d'une part, la tension de sortie au niveau des 
+        connexions est de cinq volts (nous y reviendrons plus tard) et que notre processeur est cadencé (j'adore ce mot) à 16 MHz (seize méga hertz). Alors 
+        j'entends déjà vos cloches à questions sonner et dire : C'est quoi un méga hertz ?
+        Et bien dites-vous que c'est simple (ça met dans un bonne disposition mentale) car le hertz c'est l'unité de mesure de la fréquence (comme le mètre 
+        est l'unité de mesure de la distance). Et la fréquence c'est juste le nombre de fois par seconde qu'une action est faite. Par exemple si je tape 10 
+        touches par seconde sur mon clavier, ma fréquence de frappe est de 10 hertz, on note 10 Hz.
+        Ça donne une bonne idée de ce qu'est un Hertz (Lukas, si vous continuez de m'encombrer l'appareil auditif avec votre marque de location de voiture, 
+        je vous colle une fessée cadencée à 3 Hz dont vous me direz des nouvelles !) Comme disait monsieur unePierre : tout est relatif (petite blague pour 
+        germanistes ). Si notre Arduino est bien moins rapide que des processeurs actuels, il est bien plus rapide que nous !
+        Dans le cas de notre programme il clignote à un peu moins de 77 KHz, soit 77 000 fois j'allume/j'éteins par seconde. Notre œil ne perçoit des 
+        images différentes qu'en dessous de 25Hz. </p>
+        <code>void setup() {<br>Serial.begin(9600);<br>}<br>void loop() {<br>unsigned long tempsFin; //variable pour noter le temps final<br>unsigned long  
+            tempsDepart=micros(); //variable du temps de départ initialisée au temps actuel<br>//bloc à tester<br>tempsFin=micros(); //on récupère à nouveau 
+            le temps actuel<br>Serial.println(tempsFin-tempsDepart); // on affiche la différence en microsecondes<br>}<br></code>
+        <p>Solution : pour voir le clignotement, il faut ralentir l'Arduino. Nous n'avons pas le choix, nous devons apprendre un nouveau mot clé : delay().
+        delay() indique à l'Arduino d'attendre. On a juste à mettre entre parenthèses le nombre de millisecondes que l'on souhaite. Ça nécessite un léger 
+        calcul mental : 1 s = 1000 ms.
+        Par exemple, l’instruction suivante :</p>
+        <code>delay (500);</code>
+        <p>met le programme en pause pendant 500 ms=0,5 s donc une demi-seconde. On utilise donc l'instructiondelay() en écrivant la ligne de code où l'on 
+        veut que le programme fasse une pause. Je vous laisse essayer de modifier le programme pour que notre LED 13 s'allume 1 seconde et s'éteigne 1 seconde.
+        Et voici le corrigé :</p>
+        <code>void setup()<br>{<br>pinMode(13,OUTPUT);<br>}<br>void loop()<br>{<br>digitalWrite(13,HIGH);<br>delay(1000);<br>digitalWrite(13,LOW);<br>delay(1000);
+            <br>}<br></code>
+        <p>Amusez-vous maintenant à modifier les valeurs desdelay() pour obtenir des clignotements différents.</p>
+    </section>
+            <br><br><br>
+    <section class="main-section" id="Sauvegarde_et_transfert_de_votre_programme">
+        <header>Sauvegarde et transfert de votre programme</header>
+        <p>Lorsque vous téléversez votre programme, il reste stocké dans le microcontrôleur. Vous pouvez débrancher ce dernier, le brancher à une pile 
+        9V via la prise prévue à cet effet, ou à un autre ordinateur (sans lui envoyer de programme) et vous verrez que le programme que nous venons 
+        de concevoir tourne encore. Il est donc sauvegardé. Mais il n'est plus accessible ! C'est-à-dire que vous ne pouvez pas faire l'opération inverse 
+        qui consisterait à sortir le programme de l'Arduino pour le mettre sur le logiciel de votre ordinateur. C'est la raison pour laquelle il vous 
+        faut sauvegarder votre travail. C'est le bouton le plus à droite (une flèche vers le bas) proposé par le logiciel : 
+        D'ailleurs, la dernière version propose la sauvegarde avant même de compiler. Vos fichiers sont stockés dans un dossier accessible depuis le 
+        logiciel par le menu en haut : on choisit  "Fichier" puis "Carnet de croquis" et on voit apparaître ses sauvegardes. On retrouve le même dossier 
+        dans le dossier où vous avez installé l'Arduino. Pour l'ouvrir, vous pouvez utiliser l'autre bouton (flèche vers le haut), qui vous ouvre le menu 
+        dans lequel vous verrez dans notre cas "BlinkBlink".
+        Mais que sont donc tous ces autres croquis proposés : 01.Basics, 02.Digital,... ? Si vous vous posez cette question, c'est que vous avez ouvert 
+        le dossier "Exemples" qui se trouve en dessous de "Carnet de croquis". C'est bon signe, c'est que vous commencez à prendre en main le logiciel 
+        (qu'on appelle aussi IDE pour Integrated Development Environment, c'est-à-dire environnement de développement intégré). Ces autres croquis sont la 
+        force de l'IDE, en effet, ce sont des exemples de programmes proposés par Arduino (ou parfois par les concepteurs de bibliothèques) pour nous aider 
+        à utiliser correctement les mots clés du langage. Ce sont en fait des exemples. Je vous invite à les parcourir. C'est souvent commenté en anglais, 
+        mais il va falloir s'y habituer car la langue de Shakespeare est la base de la communication entre développeurs. Vous verrez que rapidement, avec 
+        ces exemples et la documentation du site officiel (dont nous parlerons plus tard) vous volerez vite de vos propres ailes !</p>
+    </section>
+
+    <section class="main-section" id="En_resumé">
+        <header>En resumé</header>
+        <p>Vous savez maintenant connecter votre Arduino, écrire la structure de base d'un programme, sauvegarder et transférer le programme dans le 
+        microcontrôleur, et débugger certaines erreurs de code. Vous avez appris les mots-clés : </p>
+        <ul class="fin">
+            <li><b>setup()</b> qui s'exécute qu'une fois ;</li>
+            <li><b>loop()</b>qui s'exécute à l'infini ;</li>
+            <li><b>void</b>(qui se met toujours devant loop et setup et dont vous comprendrez le sens plus loin dans ce cours) ;</li>
+            <li><b>pinMode()</b>qui permet de définir une sortie en mode envoi d'électricité ou non ;</li>
+            <li><b>digitalWrite()</b>qui envoie de l'électricité par une sortie ;</li>
+            <li><b>delay()</b>qui met le programme en pause pendant un nombre défini de millisecondes.</li>
+        </ul>
+        <p>ous savez aussi que les accolades délimitent des blocs d'instructions et que le point-virgule termine une instruction. Vous savez enfin que la 
+        connexion 13 est reliée à une LED (diode électroluminescente), que vous pouvez maintenant allumer ou éteindre. Je pense que vous êtes prêt(e)s pour 
+        la suite et je vous en félicite !</p>
+    </section>
+</main><!--main-doc-->
+</body>
+</html>
